@@ -1,0 +1,5 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `CourseViewAll`()
+BEGIN
+	SELECT *
+    FROM course;
+END
