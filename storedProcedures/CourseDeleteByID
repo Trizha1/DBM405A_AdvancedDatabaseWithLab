@@ -1,0 +1,7 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `courseDeleteByID`(
+_CourseID int
+)
+BEGIN
+	delete from course
+    where CourseID = _CourseID;
+END
