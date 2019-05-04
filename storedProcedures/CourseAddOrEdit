@@ -1,0 +1,22 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `CourseAddOrEdit`(
+_CourseID int,
+_CourseTitle varchar(8),
+_Description varchar(50),
+_Cost decimal(8,2),
+_Prerequisite varchar(8)
+)
+BEGIN
+IF _CourseID=0 then
+	INSERT INTO course(CourseTitle, Description, Cost, Prerequisite)
+	VALUES (_CourseTitle, _Description, _Cost, _Prerequisite);
+    else
+		update course
+        set
+        CourseTitle=_CourseTitle,
+        Description=_Description,
+        Cost=_Cost,
+        Prerequisite=_Prerequisite
+        Where
+        CourseID=_CourseID;
+END IF;
+END
