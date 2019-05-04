@@ -1,0 +1,15 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `UpdateScoresResult`(
+_HomeTeam char(5),
+_AwayTeam char(5),
+_HomeTeamScore int(11),
+_AwayTeamScore int(11)
+)
+BEGIN
+	SET SQL_SAFE_UPDATES= 0;
+    UPDATE season
+    SET 
+    HomeTeamScore = _HomeTeamScore, 
+    AwayTeamScore = _AwayTeamScore
+    WHERE
+    HomeTeam = _HomeTeam AND AwayTeam = _AwayTeam;
+END
