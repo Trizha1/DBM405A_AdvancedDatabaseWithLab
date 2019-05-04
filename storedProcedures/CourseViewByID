@@ -1,0 +1,8 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `courseViewByID`(
+_CourseID int
+)
+BEGIN
+	SELECT * 
+    FROM course
+    WHERE CourseID = _CourseID;
+END
