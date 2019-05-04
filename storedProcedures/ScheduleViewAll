@@ -1,0 +1,5 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ScheduleViewAll`()
+BEGIN
+	select *
+	From season;
+END
