@@ -1,0 +1,6 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `TeamRostersViewAll`()
+BEGIN
+	select *
+	From players
+    Order by Team ASC;
+END
